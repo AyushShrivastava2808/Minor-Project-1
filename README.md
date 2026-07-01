@@ -110,5 +110,5 @@ Random Forest achieved higher R² and lower error values compared to Linear Regr
 
 ## 📝 Author
 Developed by **Ayush Shrivastava**  
-B.Tech CS (2024–2028)  
+B.Tech CS (2024–28)  
 
