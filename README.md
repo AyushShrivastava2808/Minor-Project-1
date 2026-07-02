@@ -1,114 +1,129 @@
-# 🚗 Car Price Prediction using Machine Learning
+🚗 Car Price Prediction Using Machine Learning
+📌 Problem Statement
+Accurate car price estimation is a critical challenge in the automobile industry. Buyers seek fair deals, while sellers aim to maximize returns. Car prices depend on multiple technical and design factors such as engine specifications, horsepower, fuel type, vehicle dimensions, mileage, and other attributes.
 
-## 📌 Problem Statement
-The automobile industry generates a large amount of data related to vehicle specifications and pricing. Determining the appropriate price of a car is important for both buyers and sellers. Car prices depend on several factors such as engine size, horsepower, fuel type, vehicle dimensions, mileage, and other technical specifications.
+This project aims to build a machine learning model that predicts car prices based on vehicle features, enabling data-driven pricing decisions for customers and businesses.
 
-The objective of this project is to develop a machine learning model that can predict the price of a car based on its features. This prediction can help customers estimate the value of a vehicle and assist businesses in making data-driven pricing decisions.
+🎯 Objectives
+Perform data preprocessing and exploratory data analysis (EDA) on a real-world dataset.
 
----
+Train and evaluate supervised machine learning models for price prediction.
 
-## 🎯 Project Objectives
-- Analyze a real-world car pricing dataset.
-- Perform data preprocessing and exploratory data analysis (EDA).
-- Train supervised machine learning models for price prediction.
-- Compare the performance of different algorithms.
-- Select the most accurate model for car price prediction.
+Compare model performance using standard evaluation metrics.
 
----
+Identify the most influential features affecting car prices.
 
-## 📂 Dataset Description
-- **Total Records**: 205  
-- **Total Features**: 26  
-- **Target Variable**: `price`
+Select the most accurate model for deployment.
 
-### Features include:
-- Fuel Type  
-- Aspiration  
-- Number of Doors  
-- Car Body Type  
-- Drive Wheel Type  
-- Wheelbase, Car Length, Car Width, Car Height  
-- Curb Weight  
-- Engine Type, Number of Cylinders, Engine Size, Horsepower  
-- Fuel System  
-- Mileage (City MPG and Highway MPG)  
+📂 Dataset Overview
+Records: 205
 
----
+Features: 26
 
-## 🛠️ Data Preprocessing
-1. **Missing Values**: Checked using `df.isnull().sum()` → No missing values found.  
-2. **Duplicate Records**: Removed using `df.duplicated().sum()`.  
-3. **Feature Removal**: Dropped `car_ID` (unique identifier).  
-4. **Feature Encoding**: Applied Label Encoding to categorical columns.  
-5. **Feature Scaling**: StandardScaler applied for Linear Regression model.  
+Target Variable: price
 
----
+Key Features:
+Fuel Type, Aspiration, Number of Doors
 
-## 📊 Exploratory Data Analysis (EDA)
-- **Car Price Distribution**:  
-  - Most cars fall within lower and medium price ranges.  
-  - A few expensive cars act as outliers.  
-  - Distribution is slightly right-skewed.  
+Car Body Type, Drive Wheel Type
 
-- **Correlation Analysis**:  
-  - Engine Size, Horsepower, and Curb Weight strongly positively correlated with price.  
-  - Highway MPG and City MPG negatively correlated with price.  
+Wheelbase, Car Length, Car Width, Car Height
 
----
+Curb Weight
 
-## 🤖 Machine Learning Models
-### 1. Linear Regression
-- ✅ Simple, interpretable, fast training.  
-- ❌ Assumes linearity, struggles with complex patterns.  
+Engine Type, Cylinders, Engine Size, Horsepower
 
-### 2. Random Forest Regressor
-- ✅ Handles non-linear relationships, reduces overfitting, higher accuracy.  
-- Selected as the **final model** due to better performance.  
+Fuel System
 
----
+Mileage (City MPG, Highway MPG)
 
-## ⚙️ Training Process
-Workflow followed:
-1. Load Dataset  
-2. Data Cleaning  
-3. Data Encoding  
-4. Feature Scaling  
-5. Train-Test Split (80:20)  
-6. Model Training  
-7. Prediction  
-8. Evaluation  
+🛠️ Data Preprocessing
+Missing Values: None detected.
 
----
+Duplicates: Removed.
 
-## 📈 Model Evaluation
+Feature Removal: Dropped car_ID (unique identifier).
+
+Encoding: Applied Label Encoding to categorical features.
+
+Scaling: StandardScaler applied for regression models requiring normalization.
+
+📊 Exploratory Data Analysis (EDA)
+Price Distribution:
+
+Majority of cars fall in lower-to-mid price ranges.
+
+Outliers exist in luxury/high-end cars.
+
+Distribution is slightly right-skewed.
+
+Correlation Insights:
+
+Strong Positive: Engine Size, Horsepower, Curb Weight.
+
+Negative: City MPG, Highway MPG.
+
+🤖 Machine Learning Models
+1. Linear Regression
+✅ Fast, interpretable.
+
+❌ Limited to linear relationships.
+
+2. Random Forest Regressor
+✅ Handles non-linear patterns, reduces overfitting.
+
+✅ Achieved higher accuracy and robustness.
+
+Selected as the final model.
+
+⚙️ Workflow
+Load Dataset
+
+Clean Data
+
+Encode Features
+
+Scale Features
+
+Train-Test Split (80:20)
+
+Train Models
+
+Predict Prices
+
+Evaluate Performance
+
+📈 Model Evaluation
 Metrics used:
-- **MAE** (Mean Absolute Error)  
-- **MSE** (Mean Squared Error)  
-- **RMSE** (Root Mean Squared Error)  
-- **R² Score**
 
----
+MAE (Mean Absolute Error)
 
-**Analysis**:  
-Random Forest achieved higher R² and lower error values compared to Linear Regression, making it the best model for car price prediction.
+MSE (Mean Squared Error)
 
----
+RMSE (Root Mean Squared Error)
 
-## 📌 Conclusion
-- Random Forest Regressor is the most effective model for predicting car prices.  
-- Engine Size, Horsepower, and Curb Weight are the most influential features.  
-- This project demonstrates how machine learning can assist in data-driven pricing decisions in the automobile industry.  
+R² Score
 
----
+Result:
 
-## 🚀 Future Work
-- Use larger datasets for better generalization.  
-- Try advanced models like Gradient Boosting, XGBoost, or Neural Networks.  
-- Deploy the model as a web app using **Streamlit** or **Flask**.  
+Random Forest outperformed Linear Regression with higher R² and lower error values.
 
----
+Key influential features: Engine Size, Horsepower, Curb Weight.
 
-## 📝 Author
-Developed by **Ayush Shrivastava**  
-B.Tech CS (2024–28)  
+📌 Conclusion
+Random Forest Regressor is the most effective model for car price prediction.
 
+Engine specifications and weight are primary drivers of car pricing.
+
+Demonstrates how ML can support data-driven decision-making in the automobile industry.
+
+🚀 Future Enhancements
+Use larger, more diverse datasets for improved generalization.
+
+Experiment with advanced models (Gradient Boosting, XGBoost, Neural Networks).
+
+Deploy as a web application using Streamlit or Flask for real-time predictions.
+
+📝 Author
+Ayush Shrivastava  
+B.Tech Computer Science (2024–2028)
